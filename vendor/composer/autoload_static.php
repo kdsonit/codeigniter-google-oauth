@@ -6,7 +6,34 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitf17e43d18ba79fdd4c29d5adaf8d13b7
 {
+    public static $files = array (
+        '7e702cccdb9dd904f2ccf22e5f37abae' => __DIR__ . '/..' . '/facebook/php-sdk-v4/src/Facebook/polyfills.php',
+    );
+
+    public static $prefixLengthsPsr4 = array (
+        'F' => 
+        array (
+            'Facebook\\' => 9,
+        ),
+        'C' => 
+        array (
+            'Composer\\Installers\\' => 20,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Facebook\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/facebook/php-sdk-v4/src/Facebook',
+        ),
+        'Composer\\Installers\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
+        ),
+    );
+
     public static $classMap = array (
+        'Codebird\\Codebird' => __DIR__ . '/..' . '/jublonet/codebird-php/src/codebird.php',
         'Google_Auth_Abstract' => __DIR__ . '/..' . '/google/apiclient/src/Google/Auth/Abstract.php',
         'Google_Auth_AppIdentity' => __DIR__ . '/..' . '/google/apiclient/src/Google/Auth/AppIdentity.php',
         'Google_Auth_AssertionCredentials' => __DIR__ . '/..' . '/google/apiclient/src/Google/Auth/AssertionCredentials.php',
@@ -2362,6 +2389,8 @@ class ComposerStaticInitf17e43d18ba79fdd4c29d5adaf8d13b7
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf17e43d18ba79fdd4c29d5adaf8d13b7::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf17e43d18ba79fdd4c29d5adaf8d13b7::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInitf17e43d18ba79fdd4c29d5adaf8d13b7::$classMap;
 
         }, null, ClassLoader::class);
