@@ -579,7 +579,7 @@ $config['GOOGLE_CALLBACK_URL'] = 'googleController/callBack';
 |
 |
 */
-//$config['GOOGLE_APP_NAME'] = 'PHP Google OAuth Login Example';
+
 $config['TWITTER_ID'] = 'XXXXXXXXXXXXXXX';
 $config['TWITTER_SECRET'] = 'XXXXXXXXXXXXXXXXXXXSSSSSSS';
 $config['TWITTER_CALLBACK_URL'] = 'twitter_callBack';
